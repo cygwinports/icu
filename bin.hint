@@ -1,4 +1,4 @@
 category: Libs
-requires: cygwin libicu32
+requires: cygwin libicu38
 sdesc: "IBM Internationalization Components for Unicode (apps and docs)"
 ldesc: "IBM Internationalization Components for Unicode"

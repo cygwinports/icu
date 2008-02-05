@@ -3,10 +3,10 @@ icu
 IBM Internationalization Components for Unicode
 
 Runtime requirements:
-  cygwin-1.5.24-2
+  cygwin-1.5.25-7
 
 Build requirements:
-  cygwin-1.5.24-2
+  cygwin-1.5.25-7
   autoconf2.5-2.61-1
   binutils-20060817-1
   cygport-0.3.7-1
@@ -24,17 +24,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack icu-3.8-1-src.tar.bz2
+  unpack icu-3.8-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./icu-3.8-1.cygport all
+  cygport ./icu-3.8-X.cygport all
 
 This will create:
-  /usr/src/icu-3.8-1-src.tar.bz2
-  /usr/src/icu-3.8-1.tar.bz2
-  /usr/src/libicu-devel-3.8-1.tar.bz2
-  /usr/src/libicu38-3.8-1.tar.bz2
+  /usr/src/icu-3.8-X-src.tar.bz2
+  /usr/src/icu-3.8-X.tar.bz2
+  /usr/src/libicu-devel-3.8-X.tar.bz2
+  /usr/src/libicu38-3.8-X.tar.bz2
 
 -------------------------------------------
 
@@ -237,6 +237,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 3.8-2 -----
+Patch from Gentoo Linux for CVE-2007-4770,4771.
 
 ----- version 3.8-1 -----
 Long-overdue version bump.
