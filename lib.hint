@@ -1,5 +1,0 @@
-category: Libs
-requires: cygwin
-external-source: icu
-sdesc: "IBM Internationalization Components for Unicode (runtime libs)"
-ldesc: "IBM Internationalization Components for Unicode"

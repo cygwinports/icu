@@ -1,5 +1,0 @@
-category: Libs
-requires: libicu38
-external-source: icu
-sdesc: "IBM Internationalization Components for Unicode (development)"
-ldesc: "IBM Internationalization Components for Unicode"
