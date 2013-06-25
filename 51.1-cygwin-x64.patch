@@ -1,22 +1,16 @@
 --- origsrc/icu/source/aclocal.m4	2013-03-15 17:16:50.000000000 -0500
 +++ src/icu/source/aclocal.m4	2013-04-15 20:36:42.634800600 -0500
-@@ -34,12 +34,15 @@ powerpc*-*-linux*)
- *-*-cygwin|*-*-mingw32|*-*-mingw64)
+@@ -31,7 +31,9 @@ powerpc*-*-linux*)
+ 		icu_cv_host_frag=mh-linux-va
+ 	fi ;;
+ *-*-linux*|*-*-gnu|*-*-k*bsd*-gnu|*-*-kopensolaris*-gnu) icu_cv_host_frag=mh-linux ;;
+-*-*-cygwin|*-*-mingw32|*-*-mingw64)
++i[[34567]]86-*-cygwin) icu_cv_host_frag=mh-cygwin ;;
++x86_64-*-cygwin) icu_cv_host_frag=mh-cygwin64 ;;
++*-*-mingw32|*-*-mingw64)
  	if test "$GCC" = yes; then
  		AC_TRY_COMPILE([
-+#ifndef __CYGWIN32__
-+#error This is not Cygwin
-+#endif], [], AC_TRY_COMPILE([
  #ifndef __MINGW32__
- #error This is not MinGW
- #endif], [], AC_TRY_COMPILE([
- #ifndef __MINGW64__
- #error This is not MinGW64
--#endif], [], icu_cv_host_frag=mh-mingw64, icu_cv_host_frag=mh-mingw), icu_cv_host_frag=mh-cygwin)
-+#endif], [], icu_cv_host_frag=mh-mingw64, icu_cv_host_frag=mh-mingw), icu_cv_host_frag=mh-cygwin), icu_cv_host_frag=mh-cygwin64)
- 	else
- 		icu_cv_host_frag=mh-cygwin-msvc
- 	fi ;;
 --- origsrc/icu/source/config/mh-cygwin64	1969-12-31 18:00:00.000000000 -0600
 +++ src/icu/source/config/mh-cygwin64	2013-04-15 20:38:11.004922500 -0500
 @@ -0,0 +1,141 @@
